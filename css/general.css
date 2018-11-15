@@ -4,15 +4,32 @@
 
 /* GENERAL */
 
+body {
+    overflow-x: hidden;
+}
+
 html, body, p, h1, h2, ul {
     margin: 0;
     padding: 0;
 }
 
-p, h1, h2, li, a {
+a {
+    text-decoration: none;
+    color: orangered;
+}
+
+p, h1, h2, li {
     font-family: 'Roboto Thin';
     color: whitesmoke;
-    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: all 0.5s;
+}
+
+p {
+    text-transform: none;
 }
 
 .navAccueil .navAccueil, 
@@ -29,6 +46,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
 }
 
@@ -37,6 +55,12 @@ header h1 {
     padding: 1% 0;
 }
 
+header img {
+    border-radius : 3000px;
+}
+
+/* 0.01 * (4.04em + 0.04em)
+*/
 nav {
     width: 100vw;
     box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.75);
@@ -50,15 +74,18 @@ nav ul {
     justify-content: space-around;
     padding : 1% 5%;
     box-sizing: border-box;
+    color: whitesmoke !important;
 }
 
 nav a:hover {
     color: rgb(190, 190, 190);
     transition: color 0.3s;
+    text-decoration: none;
 }
 
 nav a {
     transition: color 0.3s;
+    color: whitesmoke;
 }
 
 /* MAIN */
@@ -67,10 +94,109 @@ nav a {
 
 main {
     background-color: rgb(50, 50, 50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .intro {
     font-size: 1.5em;
-    
-    padding: 5% 20%;
+    padding: 2% 20%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* POSITIONNEMENT MENU PRINCIPAL */
+
+.accueil {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+}
+
+.menuPrincipal {
+    width: 35vw;
+    height: 40vh;
+    text-transform: uppercase;
+    margin: 10% 0;
+    position:relative;
+    overflow: hidden;
+}
+
+.menuPrincipal div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: relative;
+    left: 0;
+    top: calc(40vh - 4.1vw);
+    transition: top 0.5s;
+}
+
+.menuPrincipal div:hover {
+    top: 0;
+    transition: top 0.5s;
+}
+
+.menuPrincipal h2 {
+    font-size: 2.5vw;
+    padding: 2%;
+    text-align: center;
+}
+
+.menuPrincipal p{
+    margin: 10% 3%;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.menuPrincipal:first-child, .menuPrincipal:nth-child(3) {
+    margin-right: 15%
+}
+
+.menuPrincipal:nth-child(2n){
+    margin-left: 15%
+}
+
+.menuPrincipal:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    background-image: url(../images/homepage/vente.jpg);
+    background-size: cover;
+
+}
+
+.menuPrincipal:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.menuPrincipal:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+.menuPrincipal:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(10,10,10);
+    box-shadow: 0px -10px 50px 0px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.7em;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+footer p:first-child {
+    max-width: 20vw;
 }
