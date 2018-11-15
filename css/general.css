@@ -1,2 +1,31 @@
 /* Importer font */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+/* GENERAL */
+
+html, body, p, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2, li {
+    font-family: 'Roboto Light';
+    color: whitesmoke;
+}
+
+.navAccueil .navAccueil, 
+.navGalerie .navGalerie, 
+.navVente .navVente,
+.navContact .navContact {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+/* HEADER */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100vw;
+    background-color: rgb(10, 10, 10);
+}
