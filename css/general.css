@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 html, body, p, h1, h2, ul {
@@ -112,13 +113,17 @@ main {
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 2;
+    grid-column-gap: 20%;
+    grid-row-gap: 10%;
+    justify-content: center;
+    margin-bottom: 10%;
 }
 
 .menuPrincipal {
     width: 35vw;
-    height: 40vh;
+    height: 390px;
+    min-width: 390px;
     text-transform: uppercase;
-    margin: 10% 0;
     position:relative;
     overflow: hidden;
 }
@@ -133,7 +138,7 @@ main {
     background-color: rgba(0,0,0,0.8);
     position: relative;
     left: 0;
-    top: calc(40vh - 4.1vw);
+    top: calc(390px - 4.1vw);
     transition: top 0.5s;
 }
 
@@ -154,14 +159,6 @@ main {
     text-align: center;
 }
 
-.menuPrincipal:first-child, .menuPrincipal:nth-child(3) {
-    margin-right: 15%
-}
-
-.menuPrincipal:nth-child(2n){
-    margin-left: 15%
-}
-
 .menuPrincipal:first-child {
     grid-column: 1;
     grid-row: 1;
@@ -173,15 +170,69 @@ main {
 .menuPrincipal:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
+    background-image: url(../images/homepage/vente.jpg);
+    background-size: cover;
 }
 
 .menuPrincipal:nth-child(3) {
     grid-column: 1;
     grid-row: 2;
+    background-image: url(../images/homepage/vente.jpg);
+    background-size: cover;
 }
 .menuPrincipal:nth-child(4) {
     grid-column: 2;
     grid-row: 2;
+    background-image: url(../images/homepage/vente.jpg);
+    background-size: cover;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 768px) {
+    .accueil {
+        grid-template-rows: 4;
+        grid-template-columns: 1;
+        grid-row-gap: 2%;
+    }
+    
+    .menuPrincipal:nth-child(2n) {
+        grid-column: 1;
+    }
+    
+    .menuPrincipal:nth-child(2) {
+        grid-row: 3;
+    }
+    
+    .menuPrincipal:nth-child(4) {
+        grid-row: 4;
+    }
+    
+    .menuPrincipal div {
+        top: 300px;
+    }
+    
+    .menuPrincipal div h2 {
+        padding: 35px 0;
+    }
+    
+    .accueil {
+        margin-bottom: 20%;
+    }
+    
+}
+
+/* GALERIE */
+
+.galerie img {
+    height: 20vw;
+    width: 20vw;
+    object-fit: cover;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: 3;
 }
 
 /* FOOTER */
