@@ -225,15 +225,45 @@ main {
 /* GALERIE */
 
 .galerie img {
-    height: 20vw;
-    width: 20vw;
+    height: 22vw;
+    width: 22vw;
     object-fit: cover;
 }
 
 .galerie {
     display: grid;
     grid-template-columns: 3;
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vw;
+    margin-bottom: 50px;
 }
+
+.image {
+    position: relative;
+}
+
+.image:nth-child(3n+1) {
+    grid-column: 1;
+}
+
+.image:nth-child(3n+2) {
+    grid-column: 2;
+}
+
+.image:nth-child(3n+3) {
+    grid-column: 3;
+}
+
+.image [type="image"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    background-color: white;
+    border-radius: 5000px;
+    padding : 10px;
+}
+
 
 /* FOOTER */
 
