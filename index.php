@@ -1,30 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Atelier Exosphère - Accueil</title>
-        <meta description="" />
-        <meta charset="utf-8" />
-        
-        <link rel="stylesheet" href="css/general.css" />
-        <link rel="icon" href="" />
-    </head>
-    
+    <?php
+        require_once("php/head.php");
+    ?>
     <body>
         <header class="navAccueil">
             <h1>Atelier Exosphère</h1>
-            <nav>
-                <ul>
-                    <li class="navAccueil"><a href="">Accueil</a></li>
-                    <li>|</li>
-                    <li class="navGalerie"><a href="">Galerie</a></li>
-                    <li>|</li>
-                    <li class="navVente"><a href="">Vente</a></li>
-                    <li>|</li>
-                    <li class="navContact"><a href="">Contact</a></li>
-                    <li>|</li>
-                    <li><a href="">Facebook</a></li>
-                </ul>
-            </nav>
+            <?php 
+                require_once("php/header.php");
+            ?>
         </header>
         
         <main>
@@ -64,9 +48,8 @@
             </section>
         </main>
         
-        <footer>
-            <p>Ce site web, ainsi que les photos, vidéos qu'il contient sont soumises à la Licence Creative Commons 3.0 CC-BY-SA</p>
-            <p>Atelier exosphere <br /> SIREN XXXXXXXXX <br /> ADRESSE <br /> <a href="">MENTIONS LEGALES</a></p>
-        </footer>
+        <?php
+            require_once("php/footer.php");
+        ?>
     </body>
 </html>

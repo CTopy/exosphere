@@ -20,7 +20,9 @@ a {
 }
 
 p, h1, h2, li {
-    font-family: 'Roboto Thin';
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-weight: thin;
     color: whitesmoke;
 }
 
@@ -225,21 +227,28 @@ main {
 /* GALERIE */
 
 .galerie img {
-    height: 22vw;
-    width: 22vw;
+    height: 20vw;
+    width: 20vw;
     object-fit: cover;
 }
 
 .galerie {
     display: grid;
     grid-template-columns: 3;
-    grid-column-gap: 1vw;
-    grid-row-gap: 1vw;
+    grid-column-gap: 1.5vw;
+    grid-row-gap: 1.5vw;
     margin-bottom: 50px;
 }
 
 .image {
     position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image:hover {
+    transform: scale(1.02);
+    transition: all 0.5s;
 }
 
 .image:nth-child(3n+1) {
@@ -261,7 +270,7 @@ main {
     height: 50px;
     background-color: white;
     border-radius: 5000px;
-    padding : 10px;
+    margin: 10px;
 }
 
 

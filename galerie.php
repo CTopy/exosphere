@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Atelier Exosphère - Accueil</title>
-        <meta description="" />
-        <meta charset="utf-8" />
-        
-        <link rel="stylesheet" href="css/general.css" />
-        <link rel="icon" href="" />
-    </head> 
+    <?php
+        require_once("php/head.php");
+    ?>
     
     <body>
-        <header class="navAccueil">
+        <header class="navGalerie">
             <h1>Atelier Exosphère</h1>
-            <nav>
-                <ul>
-                    <li class="navAccueil"><a href="">Accueil</a></li>
-                    <li>|</li>
-                    <li class="navGalerie"><a href="">Galerie</a></li>
-                    <li>|</li>
-                    <li class="navVente"><a href="">Vente</a></li>
-                    <li>|</li>
-                    <li class="navContact"><a href="">Contact</a></li>
-                    <li>|</li>
-                    <li><a href="">Facebook</a></li>
-                </ul>
-            </nav>
+            <?php 
+                require_once("php/header.php");
+            ?>
         </header>
         
         <main>
-            <p class="intro">Découvrez toutes les réalisations de l'atelier Exosphère depuis sa création. Une brève description vous permettra de découvrir l'histoire de chaque couteau, ainsi que les matériaux avec lesquels ils sont fabriqués</p>
+            <p class="intro">Découvrez toutes les réalisations de l'Atelier Exosphère depuis sa création. Une brève description vous permettra de découvrir l'histoire de chaque couteau, ainsi que les matériaux avec lesquels ils sont fabriqués</p>
             
             <section class="galerie">
                 <div class="image">
@@ -74,9 +59,12 @@
             </section>
         </main>
         
-        <footer>
-            <p>Ce site web, ainsi que les photos, vidéos qu'il contient sont soumises à la Licence Creative Commons 3.0 CC-BY-SA</p>
-            <p>Atelier exosphere <br /> SIREN XXXXXXXXX <br /> ADRESSE <br /> <a href="">MENTIONS LEGALES</a></p>
-        </footer>
+        <?php
+        require_once("php/footer.php");
+        ?>
+        
+        <!-- SCRIPTS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/Vue.js"></script>
     </body>
 </html>
